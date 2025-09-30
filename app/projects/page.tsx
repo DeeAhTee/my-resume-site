@@ -59,6 +59,7 @@ const workExperience = [
     id: 5,
     title: 'Portfolio Website - SRE Implementation Showcase',
     description: 'Comprehensive technical showcase built with modern web technologies and SRE best practices. Features automated CI/CD deployment, performance optimization, and comprehensive monitoring. Demonstrates infrastructure automation, reliability engineering, and full-stack development skills.',
+    currentSite: true,
     longDescription: `This portfolio website serves as both a professional showcase and a demonstration of Site Reliability Engineering principles applied to web development. Built with Next.js 15 and TypeScript for type safety, the site implements modern performance optimizations including static site generation, image optimization, and efficient caching strategies.
 
 The deployment pipeline showcases DevOps best practices with automated Vercel deployment integration, ensuring consistent and reliable deployments with custom domain configuration. Privacy-focused Google Analytics 4 integration provides comprehensive monitoring and user insights while respecting visitor privacy.
@@ -77,7 +78,6 @@ Key SRE principles demonstrated include: 99.9% uptime through static generation,
     type: 'Personal Project',
     company: 'Technical Showcase',
     github: 'https://github.com/DeeAhTee/my-resume-site',
-    demo: '/',
     featured: true,
   },
   {
@@ -152,6 +152,13 @@ export default function ProjectsPage() {
                 <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
                   {project.description}
                 </p>
+
+                {/* Current site indicator */}
+                {project.currentSite && (
+                  <p className="text-gray-500 dark:text-gray-400 mb-6 italic text-sm">
+                    You are currently viewing this project
+                  </p>
+                )}
 
                 {/* Extended content for portfolio projects */}
                 {(project.id === 5 || project.id === 6) && project.longDescription && (
@@ -281,7 +288,7 @@ export default function ProjectsPage() {
                         GitHub
                       </a>
                     )}
-                    {project.demo && (
+                    {project.demo && !project.currentSite && (
                       <a
                         href={project.demo}
                         target={project.demo.startsWith('http') ? "_blank" : "_self"}
