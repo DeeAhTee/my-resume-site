@@ -77,6 +77,7 @@ Key SRE principles demonstrated include: 99.9% uptime through static generation,
     },
     type: 'Personal Project',
     company: 'Technical Showcase',
+    companyNote: 'You are currently viewing this project',
     github: 'https://github.com/DeeAhTee/my-resume-site',
     featured: true,
   },
@@ -138,13 +139,18 @@ export default function ProjectsPage() {
               >
                 <div className="flex items-center gap-2 mb-4">
                   <span className={`px-3 py-1 rounded-full text-sm font-semibold ${
-                    project.type === 'Professional Work' 
+                    project.type === 'Professional Work'
                       ? 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300'
                       : 'bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300'
                   }`}>
                     {project.type}
                   </span>
-                  <span className="text-gray-500 dark:text-gray-400 text-sm">{project.company}</span>
+                  <span className="text-gray-500 dark:text-gray-400 text-sm">
+                    {project.company}
+                    {project.companyNote && (
+                      <span className="italic"> - {project.companyNote}</span>
+                    )}
+                  </span>
                 </div>
                 
                 <h3 className="text-2xl font-bold mb-4">{project.title}</h3>
@@ -152,13 +158,6 @@ export default function ProjectsPage() {
                 <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
                   {project.description}
                 </p>
-
-                {/* Current site indicator */}
-                {project.currentSite && (
-                  <p className="text-gray-500 dark:text-gray-400 mb-6 italic text-sm">
-                    You are currently viewing this project
-                  </p>
-                )}
 
                 {/* Extended content for portfolio projects */}
                 {(project.id === 5 || project.id === 6) && project.longDescription && (
