@@ -101,8 +101,8 @@ SRE principles applied: automated database backups, comprehensive logging and mo
     },
     type: 'Personal Project',
     company: 'Professional B2B Platform',
-    github: 'https://github.com/DeeAhTee/my-resume-site',
-    demo: 'https://fleetreq.vercel.app/',
+    github: 'https://github.com/FleetReq/platform',
+    demo: 'https://fleetreq.vercel.app',
     featured: true,
   },
 ]
