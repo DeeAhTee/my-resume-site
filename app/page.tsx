@@ -4,7 +4,6 @@ import BackgroundAnimation from './components/BackgroundAnimation';
 import HeroSection from './components/HeroSection';
 import Testimonials from './components/Testimonials';
 import AnimatedCounter from './components/AnimatedCounter';
-import OAuthRedirectHandler from './components/OAuthRedirectHandler';
 
 const structuredData = {
   "@context": "https://schema.org",
@@ -51,9 +50,6 @@ const structuredData = {
 export default function Home() {
   return (
     <>
-      {/* OAuth Redirect Handler */}
-      <OAuthRedirectHandler />
-
       {/* Structured Data */}
       <script
         type="application/ld+json"

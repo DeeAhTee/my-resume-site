@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import Link from 'next/link'
 
 interface PublicStats {
   total_cars: number
@@ -24,7 +23,7 @@ export default function MileageStatsWidget() {
 
   const loadStats = async () => {
     try {
-      const response = await fetch('/api/stats?public=true')
+      const response = await fetch('https://fleetreq.vercel.app/api/stats?public=true')
       if (response.ok) {
         const data = await response.json()
         setStats(data.stats)
@@ -69,15 +68,17 @@ export default function MileageStatsWidget() {
         <p className="text-gray-600 dark:text-gray-300 mb-4">
           A full-stack application for tracking vehicle fuel efficiency and maintenance records.
         </p>
-        <Link
-          href="/mileage"
+        <a
+          href="https://fleetreq.vercel.app"
+          target="_blank"
+          rel="noopener noreferrer"
           className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium transition-colors duration-200"
         >
           View Project
           <svg className="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
           </svg>
-        </Link>
+        </a>
       </div>
     )
   }
@@ -95,12 +96,14 @@ export default function MileageStatsWidget() {
             Vehicle Analytics
           </h3>
         </div>
-        <Link
-          href="/mileage"
+        <a
+          href="https://fleetreq.vercel.app"
+          target="_blank"
+          rel="noopener noreferrer"
           className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 text-sm font-medium transition-colors duration-200"
         >
           View Details →
-        </Link>
+        </a>
       </div>
 
       <div className="grid grid-cols-2 gap-4 mb-4">
