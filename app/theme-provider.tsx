@@ -28,31 +28,21 @@ export function ThemeProvider({
   storageKey = "resume-theme",
   ...props
 }: ThemeProviderProps) {
-  const [theme, setTheme] = useState<Theme>(defaultTheme);
-
-  useEffect(() => {
-    const stored = localStorage.getItem(storageKey) as Theme;
-    // Only use stored theme if it's light or dark (ignore old "system" values)
-    if (stored && (stored === "light" || stored === "dark")) {
-      setTheme(stored);
+  const [theme, setTheme] = useState<Theme>(() => {
+    // Read from localStorage immediately during initialization to prevent flash
+    if (typeof window !== "undefined") {
+      const stored = localStorage.getItem(storageKey) as Theme;
+      // Only use stored theme if it's light or dark (ignore old "system" values)
+      if (stored && (stored === "light" || stored === "dark")) {
+        return stored;
+      }
     }
-  }, [storageKey]);
+    return defaultTheme;
+  });
 
   useEffect(() => {
     const root = window.document.documentElement;
-
     root.classList.remove("light", "dark");
-
-    if (theme === "system") {
-      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
-        .matches
-        ? "dark"
-        : "light";
-
-      root.classList.add(systemTheme);
-      return;
-    }
-
     root.classList.add(theme);
   }, [theme]);
 
