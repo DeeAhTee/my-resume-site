@@ -32,7 +32,8 @@ export function ThemeProvider({
 
   useEffect(() => {
     const stored = localStorage.getItem(storageKey) as Theme;
-    if (stored) {
+    // Only use stored theme if it's light or dark (ignore old "system" values)
+    if (stored && (stored === "light" || stored === "dark")) {
       setTheme(stored);
     }
   }, [storageKey]);
