@@ -61,14 +61,14 @@ export default function Home() {
       <HeroSection />
 
       {/* Testimonials */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8">
+      <section className="pt-12 pb-4 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <Testimonials />
         </div>
       </section>
 
       {/* Experience Section */}
-      <section id="experience" className="relative py-16 px-4 sm:px-6 lg:px-8">
+      <section id="experience" className="relative pt-8 pb-16 px-4 sm:px-6 lg:px-8">
         {/* Section background with subtle overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/60 to-transparent dark:via-gray-900/30 backdrop-blur-md"></div>
 
