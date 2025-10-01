@@ -61,19 +61,19 @@ export default function Home() {
       <HeroSection />
 
       {/* Testimonials */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <Testimonials />
         </div>
       </section>
 
       {/* Quick Overview Section */}
-      <section id="services" className="relative py-24 px-4 sm:px-6 lg:px-8">
+      <section id="services" className="relative py-16 px-4 sm:px-6 lg:px-8">
         {/* Enhanced section background with better blur */}
         <div className="absolute inset-0 bg-white/80 dark:bg-gray-900/60 backdrop-blur-xl border-y border-gray-200/30 dark:border-gray-700/30"></div>
 
         <div className="relative max-w-7xl mx-auto">
-          <div className="text-center mb-20">
+          <div className="text-center mb-12">
             <h2 className="text-5xl sm:text-6xl font-bold mb-6 text-gradient-primary">
               What I Do
             </h2>
@@ -132,44 +132,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Call to Action - Moved Up */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50/80 to-indigo-50/80 dark:from-blue-900/20 dark:to-indigo-900/20 backdrop-blur-sm">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-            Ready to Build Something Amazing?
-          </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
-            Let&#39;s discuss how I can help scale your infrastructure and solve complex technical challenges
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
-              className="bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white px-8 py-3 rounded-lg font-medium transition-all duration-200 inline-flex items-center justify-center shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
-            >
-              Get In Touch
-              <svg className="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-              </svg>
-            </Link>
-
-            <Link
-              href="/about"
-              className="border-2 border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-400 dark:hover:text-gray-900 px-8 py-3 rounded-lg font-medium transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
-            >
-              Learn More About Me
-            </Link>
-          </div>
-        </div>
-      </section>
-
       {/* Experience Section */}
-      <section id="experience" className="relative py-20 px-4 sm:px-6 lg:px-8">
+      <section id="experience" className="relative py-16 px-4 sm:px-6 lg:px-8">
         {/* Section background with subtle overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/60 to-transparent dark:via-gray-900/30 backdrop-blur-md"></div>
 
         <div className="relative max-w-6xl mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
               Trusted by Leading Companies
             </h2>
@@ -252,9 +221,9 @@ export default function Home() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
+          <div className="text-center mb-10">
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Impact by the Numbers</h2>
             <p className="text-xl text-gray-600 dark:text-gray-300">Measurable results from infrastructure and automation work</p>
           </div>
@@ -291,6 +260,37 @@ export default function Home() {
               <p className="text-gray-600 dark:text-gray-300 font-medium">Client Satisfaction</p>
               <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">Project Delivery</p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action - Final Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50/80 to-indigo-50/80 dark:from-blue-900/20 dark:to-indigo-900/20 backdrop-blur-sm">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+            Ready to Build Something Amazing?
+          </h2>
+          <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
+            Let&#39;s discuss how I can help scale your infrastructure and solve complex technical challenges
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/contact"
+              className="bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white px-8 py-3 rounded-lg font-medium transition-all duration-200 inline-flex items-center justify-center shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+            >
+              Get In Touch
+              <svg className="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+              </svg>
+            </Link>
+
+            <Link
+              href="/about"
+              className="border-2 border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-400 dark:hover:text-gray-900 px-8 py-3 rounded-lg font-medium transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
+            >
+              Learn More About Me
+            </Link>
           </div>
         </div>
       </section>
