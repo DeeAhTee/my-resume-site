@@ -20,6 +20,15 @@ export default function Testimonials() {
       content: "Unlike other project managers I've worked with, Bruce approaches leadership differently. When he has an idea for the main design, he brings it to the team for discussion. We take time to consider all thoughts and considerations together. He's genuinely open to feedback and willing to admit when someone else has an idea he really likes. His collaborative approach to design decisions makes him an exceptional team lead.",
       project: "Senior Capstone Project",
       highlight: "His collaborative approach to design decisions makes him an exceptional team lead."
+    },
+    {
+      id: 3,
+      name: "Aaron Squier",
+      title: "Staff Software Engineer",
+      company: "Apex Fintech Solutions & PCEP Steering Committee Member",
+      content: "I had the pleasure of meeting Bruce while interviewing for the PCEP internship. He stood out head and shoulders above his peers. Lots of people can code, but Bruce has both engineering skills and, more importantly and harder to find, amazing soft skills—especially communication. Eventually Bruce came and worked with me as an intern on my backend team here at Apex. Bruce proved himself to be very capable and a joy to work with. His ability to communicate and think at both high and low levels about topics he is comfortable with never ceases to amaze me. I think he would be an asset to any engineering organization that is lucky enough to have him. An all around solid engineer who I would be happy to work with any day.",
+      project: "PCEP Internship & Apex Backend Team",
+      highlight: "He stood out head and shoulders above his peers."
     }
   ]
 
