@@ -44,12 +44,12 @@ export default function Resume() {
         </header>
 
         {/* Professional Summary Section */}
-        <section className="mb-12 py-8 bg-gradient-to-r from-blue-50/80 to-indigo-50/80 dark:from-blue-900/20 dark:to-indigo-900/20 backdrop-blur-sm rounded-2xl">
+        <section className="mb-12 py-8 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 backdrop-blur-sm rounded-2xl">
           <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6 border-b-2 border-blue-500 dark:border-blue-400 pb-2 text-center">
             PROFESSIONAL SUMMARY
           </h2>
-          <div className="bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-gray-200/50 dark:border-gray-700/50 mx-4">
-            <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed">
+          <div className="bg-white dark:bg-gray-800/90 backdrop-blur-sm p-6 rounded-lg shadow-lg border-2 border-gray-300 dark:border-gray-700/50 mx-4">
+            <p className="text-gray-900 dark:text-gray-300 text-lg leading-relaxed">
               Site Reliability Engineer with 2+ years of experience specializing in observability platforms, cross-team collaboration, and automated systems for distributed environments. Expert in deploying and maintaining monitoring solutions using DataDog, developing Python and Bash automation scripts, and ensuring 99.9% SLA compliance. Proven track record architecting MongoDB migrations (60B+ documents), implementing containerized solutions with Kubernetes, and building RESTful APIs for financial services platforms.
             </p>
             <div className="mt-4">
@@ -78,7 +78,7 @@ export default function Resume() {
         </section>
 
         {/* Technical Skills Section */}
-        <section className="mb-12 py-8 bg-gradient-to-r from-green-50/80 to-blue-50/80 dark:from-green-900/20 dark:to-blue-900/20 backdrop-blur-sm rounded-2xl">
+        <section className="mb-12 py-8 bg-gradient-to-r from-green-50 to-blue-50 dark:from-green-900/20 dark:to-blue-900/20 backdrop-blur-sm rounded-2xl">
           <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6 border-b-2 border-blue-500 dark:border-blue-400 pb-2 text-center">
             TECHNICAL SKILLS
           </h2>
@@ -86,7 +86,7 @@ export default function Resume() {
 
           <div className="grid md:grid-cols-2 gap-6">
             <div>
-              <h3 className="font-semibold text-gray-800 dark:text-gray-200 mb-3">
+              <h3 className="font-semibold text-gray-900 dark:text-gray-200 mb-3">
                 Languages & Scripting:
               </h3>
               <div className="flex flex-wrap gap-2">
@@ -104,7 +104,7 @@ export default function Resume() {
             </div>
 
             <div>
-              <h3 className="font-semibold text-gray-800 dark:text-gray-200 mb-3">
+              <h3 className="font-semibold text-gray-900 dark:text-gray-200 mb-3">
                 Observability & Monitoring:
               </h3>
               <div className="flex flex-wrap gap-2">
@@ -126,7 +126,7 @@ export default function Resume() {
             </div>
 
             <div>
-              <h3 className="font-semibold text-gray-800 dark:text-gray-200 mb-3">
+              <h3 className="font-semibold text-gray-900 dark:text-gray-200 mb-3">
                 Infrastructure & DevOps:
               </h3>
               <div className="flex flex-wrap gap-2">
@@ -152,7 +152,7 @@ export default function Resume() {
             </div>
 
             <div>
-              <h3 className="font-semibold text-gray-800 dark:text-gray-200 mb-3">
+              <h3 className="font-semibold text-gray-900 dark:text-gray-200 mb-3">
                 Databases & APIs:
               </h3>
               <div className="flex flex-wrap gap-2">
@@ -179,7 +179,7 @@ export default function Resume() {
         </section>
 
         {/* Experience Section */}
-        <section className="mb-12 py-8 bg-gradient-to-r from-gray-50/80 to-blue-50/80 dark:from-gray-900/20 dark:to-blue-900/20 backdrop-blur-sm rounded-2xl">
+        <section className="mb-12 py-8 bg-gradient-to-r from-gray-50 to-blue-50 dark:from-gray-900/20 dark:to-blue-900/20 backdrop-blur-sm rounded-2xl">
           <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6 border-b-2 border-blue-500 dark:border-blue-400 pb-2 text-center">
             EXPERIENCE
           </h2>
@@ -193,7 +193,7 @@ export default function Resume() {
                   <h3 className="text-xl font-semibold dark:text-white">
                     Apex Fintech Solutions
                   </h3>
-                  <p className="text-gray-700 dark:text-gray-300 italic">
+                  <p className="text-gray-900 dark:text-gray-300 italic">
                     Site Reliability Engineer
                   </p>
                 </div>
@@ -201,7 +201,7 @@ export default function Resume() {
                   Jan 2024 - Present
                 </span>
               </div>
-              <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2 mt-3">
+              <ul className="list-disc list-inside text-gray-900 dark:text-gray-300 space-y-2 mt-3">
                 <li>
                   <strong>Developed Python and Bash automation scripts</strong> for MongoDB migration from on-premises to Atlas cloud, successfully transferring 60B+ documents with zero data loss
                 </li>
@@ -230,7 +230,7 @@ export default function Resume() {
                   <h3 className="text-xl font-semibold dark:text-white">
                     Trimble
                   </h3>
-                  <p className="text-gray-700 dark:text-gray-300 italic">
+                  <p className="text-gray-900 dark:text-gray-300 italic">
                     Software Engineer Intern
                   </p>
                 </div>
@@ -238,7 +238,7 @@ export default function Resume() {
                   Jul 2023 - Dec 2023
                 </span>
               </div>
-              <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2 mt-3">
+              <ul className="list-disc list-inside text-gray-900 dark:text-gray-300 space-y-2 mt-3">
                 <li>
                   <strong>Delivered software solutions</strong> in dual Developer/QA role, implementing automated testing frameworks that improved code quality and reduced production incidents by 30%
                 </li>
@@ -258,7 +258,7 @@ export default function Resume() {
                   <h3 className="text-xl font-semibold dark:text-white">
                     Portland State University
                   </h3>
-                  <p className="text-gray-700 dark:text-gray-300 italic">
+                  <p className="text-gray-900 dark:text-gray-300 italic">
                     Computer Science Co-Tutoring Coordinator
                   </p>
                 </div>
@@ -266,7 +266,7 @@ export default function Resume() {
                   Jun 2022 - Dec 2023
                 </span>
               </div>
-              <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2 mt-3">
+              <ul className="list-disc list-inside text-gray-900 dark:text-gray-300 space-y-2 mt-3">
                 <li>
                   <strong>Mentored 50+ students</strong> in algorithms, data structures, and programming fundamentals through debugging and code review sessions across Python, Java, and C++
                 </li>
@@ -286,7 +286,7 @@ export default function Resume() {
                   <h3 className="text-xl font-semibold dark:text-white">
                     Precision Castparts Corporation
                   </h3>
-                  <p className="text-gray-700 dark:text-gray-300 italic">
+                  <p className="text-gray-900 dark:text-gray-300 italic">
                     Supply Coordinating Manager
                   </p>
                 </div>
@@ -294,7 +294,7 @@ export default function Resume() {
                   Nov 2021 - Jun 2022
                 </span>
               </div>
-              <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2 mt-3">
+              <ul className="list-disc list-inside text-gray-900 dark:text-gray-300 space-y-2 mt-3">
                 <li>
                   <strong>Automated data analysis workflows</strong> using SQL and custom scripts, streamlining regulatory compliance and reducing manual reporting time by 60%
                 </li>
@@ -314,7 +314,7 @@ export default function Resume() {
                   <h3 className="text-xl font-semibold dark:text-white">
                     Holy Trinity Catholic School
                   </h3>
-                  <p className="text-gray-700 dark:text-gray-300 italic">
+                  <p className="text-gray-900 dark:text-gray-300 italic">
                     Technology Coordinator & Curriculum Developer
                   </p>
                 </div>
@@ -322,7 +322,7 @@ export default function Resume() {
                   Sep 2018 - Jan 2022
                 </span>
               </div>
-              <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2 mt-3">
+              <ul className="list-disc list-inside text-gray-900 dark:text-gray-300 space-y-2 mt-3">
                 <li>
                   <strong>Architected Python coding curriculum</strong> for 200+ students across K-8 grades
                 </li>
@@ -339,7 +339,7 @@ export default function Resume() {
         </section>
 
         {/* Education Section */}
-        <section className="mb-12 py-8 bg-gradient-to-r from-purple-50/80 to-indigo-50/80 dark:from-purple-900/20 dark:to-indigo-900/20 backdrop-blur-sm rounded-2xl">
+        <section className="mb-12 py-8 bg-gradient-to-r from-purple-50 to-indigo-50 dark:from-purple-900/20 dark:to-indigo-900/20 backdrop-blur-sm rounded-2xl">
           <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6 border-b-2 border-blue-500 dark:border-blue-400 pb-2 text-center">
             EDUCATION
           </h2>
@@ -355,7 +355,7 @@ export default function Resume() {
                   Jan 2015 – Jun 2024
                 </span>
               </div>
-              <p className="text-gray-700 dark:text-gray-300 italic mb-3">
+              <p className="text-gray-900 dark:text-gray-300 italic mb-3">
                 Bachelor of Science - Major in Computer Science, Minor in
                 Philosophy
               </p>
@@ -366,7 +366,7 @@ export default function Resume() {
                 <h4 className="font-semibold text-gray-800 dark:text-gray-200">
                   PSU Capstone - Bike Index Platform Team Lead
                 </h4>
-                <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 mt-2 space-y-1">
+                <ul className="list-disc list-inside text-gray-900 dark:text-gray-300 mt-2 space-y-1">
                   <li>
                     Led cross-functional team of 5+ developers implementing microservices architecture with RESTful APIs and containerized deployment for bike theft tracking platform
                   </li>
@@ -394,7 +394,7 @@ export default function Resume() {
                   Jan 2008 – Mar 2023
                 </span>
               </div>
-              <p className="text-gray-700 dark:text-gray-300 italic">
+              <p className="text-gray-900 dark:text-gray-300 italic">
                 Associate of Science – Oregon Transfer
               </p>
             </div>
@@ -403,9 +403,9 @@ export default function Resume() {
         </section>
 
         {/* Contact for Resume */}
-        <section className="py-8 bg-gradient-to-r from-blue-50/80 to-indigo-50/80 dark:from-blue-900/20 dark:to-indigo-900/20 backdrop-blur-sm rounded-2xl">
+        <section className="py-8 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 backdrop-blur-sm rounded-2xl">
           <div className="text-center px-4">
-            <div className="bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm p-8 rounded-lg shadow-lg border border-gray-200/50 dark:border-gray-700/50 max-w-2xl mx-auto">
+            <div className="bg-white dark:bg-gray-800/90 backdrop-blur-sm p-8 rounded-lg shadow-lg border-2 border-gray-300 dark:border-gray-700/50 max-w-2xl mx-auto">
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-6">
                 Let&apos;s Connect
               </h3>
