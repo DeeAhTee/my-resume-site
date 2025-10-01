@@ -5,6 +5,7 @@ import { ThemeProvider } from "./theme-provider";
 import { Navigation } from "./components/navigation";
 import Analytics from "./components/Analytics";
 import ScrollToTop from "./components/ScrollToTop";
+import { ErrorBoundary } from "./components/ErrorBoundary";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -98,8 +99,13 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#2563eb" />
         <meta name="color-scheme" content="light dark" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-title" content="Bruce Truong" />
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -122,15 +128,16 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800 text-gray-900 dark:text-white min-h-screen`}
       >
-        <ThemeProvider defaultTheme="system" storageKey="resume-theme">
-          <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-blue-600 focus:text-white focus:rounded-lg">
-            Skip to content
-          </a>
-          <Navigation />
-          <main id="main-content" className="min-h-screen">
-            {children}
-          </main>
-          <ScrollToTop />
+        <ErrorBoundary>
+          <ThemeProvider defaultTheme="system" storageKey="resume-theme">
+            <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-blue-600 focus:text-white focus:rounded-lg">
+              Skip to content
+            </a>
+            <Navigation />
+            <main id="main-content" className="min-h-screen">
+              {children}
+            </main>
+            <ScrollToTop />
 
           {/* Professional footer */}
           <footer className="border-t border-gray-200/60 dark:border-gray-700/40 bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl">
@@ -172,7 +179,8 @@ export default function RootLayout({
               </div>
             </div>
           </footer>
-        </ThemeProvider>
+          </ThemeProvider>
+        </ErrorBoundary>
         <Analytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
 
         {/* Structured Data */}
