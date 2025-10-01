@@ -68,9 +68,9 @@ export default function Home() {
       </section>
 
       {/* Experience Section */}
-      <section id="experience" className="relative pt-8 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50/50 to-indigo-50/50 dark:from-blue-900/10 dark:to-indigo-900/10">
+      <section id="experience" className="relative pt-8 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/10 dark:to-indigo-900/10">
         {/* Section background with subtle overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/40 to-transparent dark:via-gray-900/20 backdrop-blur-sm"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/20 to-transparent dark:via-gray-900/20 backdrop-blur-sm"></div>
 
         <div className="relative max-w-6xl mx-auto">
           <div className="text-center mb-12">
@@ -85,7 +85,7 @@ export default function Home() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {/* Apex Fintech */}
-            <div className="group bg-white/98 dark:bg-gray-900/90 backdrop-blur-md p-8 rounded-2xl shadow-xl border border-gray-200/40 dark:border-gray-700/30 transition-all duration-500 hover:shadow-2xl hover:-translate-y-3 hover:bg-white dark:hover:bg-gray-900 hover:border-green-300/60 dark:hover:border-green-700/50">
+            <div className="group bg-white dark:bg-gray-900/90 backdrop-blur-md p-8 rounded-2xl shadow-xl border-2 border-gray-300 dark:border-gray-700/30 transition-all duration-500 hover:shadow-2xl hover:-translate-y-3 hover:bg-white dark:hover:bg-gray-900 hover:border-green-400 dark:hover:border-green-700/50">
               <div className="flex items-center mb-6">
                 <div className="w-16 h-16 bg-gradient-to-br from-green-100 to-green-200 dark:from-green-900/50 dark:to-green-800/50 rounded-xl flex items-center justify-center mr-4 transition-all duration-300 group-hover:scale-110 group-hover:rotate-6 overflow-hidden shadow-lg border border-green-200/50 dark:border-green-700/50">
                   <Image
@@ -101,7 +101,7 @@ export default function Home() {
                   <p className="text-sm font-medium text-gray-600 dark:text-gray-400 bg-green-100 dark:bg-green-900/30 px-2 py-1 rounded-full inline-block">2024 - Present</p>
                 </div>
               </div>
-              <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+              <p className="text-gray-900 dark:text-gray-300 leading-relaxed">
                 Leading MongoDB migration of <strong className="text-green-600 dark:text-green-400">
                   <AnimatedCounter value={60} suffix="+ billion documents" className="font-bold" />
                 </strong> to cloud infrastructure with comprehensive automation and testing
@@ -109,7 +109,7 @@ export default function Home() {
             </div>
 
             {/* Trimble */}
-            <div className="group bg-white/98 dark:bg-gray-900/90 backdrop-blur-md p-8 rounded-2xl shadow-xl border border-gray-200/40 dark:border-gray-700/30 transition-all duration-500 hover:shadow-2xl hover:-translate-y-3 hover:bg-white dark:hover:bg-gray-900 hover:border-blue-300/60 dark:hover:border-blue-700/50">
+            <div className="group bg-white dark:bg-gray-900/90 backdrop-blur-md p-8 rounded-2xl shadow-xl border-2 border-gray-300 dark:border-gray-700/30 transition-all duration-500 hover:shadow-2xl hover:-translate-y-3 hover:bg-white dark:hover:bg-gray-900 hover:border-blue-400 dark:hover:border-blue-700/50">
               <div className="flex items-center mb-6">
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-100 to-blue-200 dark:from-blue-900/50 dark:to-blue-800/50 rounded-xl flex items-center justify-center mr-4 transition-all duration-300 group-hover:scale-110 group-hover:rotate-6 overflow-hidden shadow-lg border border-blue-200/50 dark:border-blue-700/50">
                   <Image
@@ -125,13 +125,13 @@ export default function Home() {
                   <p className="text-sm font-medium text-gray-600 dark:text-gray-400 bg-blue-100 dark:bg-blue-900/30 px-2 py-1 rounded-full inline-block">2023</p>
                 </div>
               </div>
-              <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+              <p className="text-gray-900 dark:text-gray-300 leading-relaxed">
                 Full-stack development and <strong className="text-blue-600 dark:text-blue-400">Quality Assurance</strong> using Azure DevOps, modern CI/CD, and database management
               </p>
             </div>
 
             {/* Portland State */}
-            <div className="group bg-white/98 dark:bg-gray-900/90 backdrop-blur-md p-8 rounded-2xl shadow-xl border border-gray-200/40 dark:border-gray-700/30 transition-all duration-500 hover:shadow-2xl hover:-translate-y-3 hover:bg-white dark:hover:bg-gray-900 hover:border-purple-300/60 dark:hover:border-purple-700/50">
+            <div className="group bg-white dark:bg-gray-900/90 backdrop-blur-md p-8 rounded-2xl shadow-xl border-2 border-gray-300 dark:border-gray-700/30 transition-all duration-500 hover:shadow-2xl hover:-translate-y-3 hover:bg-white dark:hover:bg-gray-900 hover:border-purple-400 dark:hover:border-purple-700/50">
               <div className="flex items-center mb-6">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-100 to-purple-200 dark:from-purple-900/50 dark:to-purple-800/50 rounded-xl flex items-center justify-center mr-4 transition-all duration-300 group-hover:scale-110 group-hover:rotate-6 overflow-hidden shadow-lg border border-purple-200/50 dark:border-purple-700/50">
                   <Image
@@ -147,7 +147,7 @@ export default function Home() {
                   <p className="text-sm font-medium text-gray-600 dark:text-gray-400 bg-purple-100 dark:bg-purple-900/30 px-2 py-1 rounded-full inline-block">2015 - 2024</p>
                 </div>
               </div>
-              <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+              <p className="text-gray-900 dark:text-gray-300 leading-relaxed">
                 <strong className="text-purple-600 dark:text-purple-400">Computer Science degree</strong> with team leadership experience in Capstone project development
               </p>
             </div>
