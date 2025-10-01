@@ -28,7 +28,7 @@ export default function Resume() {
         <BackgroundAnimation />
 
       {/* PDF Download Button - Fixed Position */}
-      <div className="fixed top-24 right-6 z-50 print:hidden">
+      <div className="fixed top-24 right-6 z-50">
         <PDFDownload />
       </div>
 
