@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "./theme-provider";
 import { Navigation } from "./components/navigation";
 import Analytics from "./components/Analytics";
+import ScrollToTop from "./components/ScrollToTop";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -122,10 +123,14 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800 text-gray-900 dark:text-white min-h-screen`}
       >
         <ThemeProvider defaultTheme="system" storageKey="resume-theme">
+          <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-blue-600 focus:text-white focus:rounded-lg">
+            Skip to content
+          </a>
           <Navigation />
-          <main className="min-h-screen">
+          <main id="main-content" className="min-h-screen">
             {children}
           </main>
+          <ScrollToTop />
 
           {/* Professional footer */}
           <footer className="border-t border-gray-200/60 dark:border-gray-700/40 bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl">

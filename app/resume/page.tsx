@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import BackgroundAnimation from '../components/BackgroundAnimation'
 import PDFDownload from '../components/PDFDownload'
+import Breadcrumbs from '../components/Breadcrumbs'
 
 export const metadata: Metadata = {
   title: "Resume - Bruce Truong",
@@ -18,8 +19,13 @@ export const metadata: Metadata = {
 
 export default function Resume() {
   return (
-    <div className="relative overflow-hidden min-h-screen">
-      <BackgroundAnimation />
+    <>
+      <Breadcrumbs items={[
+        { name: 'Home', url: '/' },
+        { name: 'Resume', url: '/resume' }
+      ]} />
+      <div className="relative overflow-hidden min-h-screen">
+        <BackgroundAnimation />
 
       {/* PDF Download Button - Fixed Position */}
       <div className="fixed top-24 right-6 z-50 print:hidden">
@@ -424,5 +430,6 @@ export default function Resume() {
         </section>
       </div>
     </div>
+    </>
   );
 }

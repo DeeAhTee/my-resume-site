@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import Image from 'next/image'
 import BackgroundAnimation from '../components/BackgroundAnimation'
 import PhotographyGallery from '../components/PhotographyGallery'
+import Breadcrumbs from '../components/Breadcrumbs'
 
 export const metadata: Metadata = {
   title: 'About - Bruce Truong',
@@ -69,19 +70,24 @@ export default function AboutPage() {
   ]
 
   return (
-    <div className="relative overflow-hidden min-h-screen">
-      <BackgroundAnimation />
+    <>
+      <Breadcrumbs items={[
+        { name: 'Home', url: '/' },
+        { name: 'About', url: '/about' }
+      ]} />
+      <div className="relative overflow-hidden min-h-screen">
+        <BackgroundAnimation />
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
             About Me
           </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-900 dark:text-gray-400 max-w-3xl mx-auto">
             Software Engineer, educator at heart, and community builder who brings curiosity, strategic thinking, and genuine human connection to everything I&nbsp;do
           </p>
         </div>
 
-        <section className="mb-16 py-12 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl shadow-lg border border-gray-200/50 dark:border-gray-700/50">
+        <section className="mb-16 py-12 bg-white dark:bg-gray-800/90 backdrop-blur-sm rounded-2xl shadow-lg border-2 border-gray-300 dark:border-gray-700/50">
           <div className="relative px-8">
             {/* Floating image on the right */}
             <div className="md:float-right md:ml-8 md:mb-6 mb-8 md:w-80 w-full">
@@ -97,7 +103,7 @@ export default function AboutPage() {
             </div>
             
             {/* Story content that flows around the image */}
-            <div className="text-gray-600 dark:text-gray-400 leading-relaxed">
+            <div className="text-gray-900 dark:text-gray-400 leading-relaxed">
               <h2 className="text-3xl font-bold mb-6 text-gray-900 dark:text-white">My Story</h2>
               
               <p className="mb-6 text-lg">
@@ -161,7 +167,7 @@ export default function AboutPage() {
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-10 text-center">What Drives Me</h3>
 
             <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-gradient-to-br from-blue-50/50 to-indigo-50/50 dark:from-blue-900/10 dark:to-indigo-900/10 p-6 rounded-2xl">
+              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/10 dark:to-indigo-900/10 p-6 rounded-2xl">
                 <div className="flex items-start mb-4">
                   <div className="w-8 h-8 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center mr-4 mt-1 flex-shrink-0">
                     <svg className="w-4 h-4 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -170,14 +176,14 @@ export default function AboutPage() {
                   </div>
                   <div>
                     <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Educator at Heart</h4>
-                    <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                    <p className="text-gray-900 dark:text-gray-400 text-sm leading-relaxed">
                       From helping classmates in 4th grade to teaching as a wizard chess instructor and beloved &quot;Batman&quot; math teacher, I believe the best solutions are the ones everyone can understand and build upon.
                     </p>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-purple-50/50 to-pink-50/50 dark:from-purple-900/10 dark:to-pink-900/10 p-6 rounded-2xl">
+              <div className="bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-900/10 dark:to-pink-900/10 p-6 rounded-2xl">
                 <div className="flex items-start mb-4">
                   <div className="w-8 h-8 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center mr-4 mt-1 flex-shrink-0">
                     <svg className="w-4 h-4 text-purple-600 dark:text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -186,14 +192,14 @@ export default function AboutPage() {
                   </div>
                   <div>
                     <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Strategic Thinker</h4>
-                    <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                    <p className="text-gray-900 dark:text-gray-400 text-sm leading-relaxed">
                       From chess and poker strategy to pickleball coaching and martial arts training, I apply analytical frameworks and strategic thinking to solve complex problems creatively.
                     </p>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-green-50/50 to-emerald-50/50 dark:from-green-900/10 dark:to-emerald-900/10 p-6 rounded-2xl">
+              <div className="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/10 dark:to-emerald-900/10 p-6 rounded-2xl">
                 <div className="flex items-start mb-4">
                   <div className="w-8 h-8 bg-green-100 dark:bg-green-900/30 rounded-lg flex items-center justify-center mr-4 mt-1 flex-shrink-0">
                     <svg className="w-4 h-4 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -202,14 +208,14 @@ export default function AboutPage() {
                   </div>
                   <div>
                     <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Growth Mindset</h4>
-                    <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                    <p className="text-gray-900 dark:text-gray-400 text-sm leading-relaxed">
                       Every challenge is a learning opportunity. I&apos;m comfortable saying &quot;I don&apos;t know&quot; and excited to figure it out together with the team.
                     </p>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-orange-50/50 to-red-50/50 dark:from-orange-900/10 dark:to-red-900/10 p-6 rounded-2xl">
+              <div className="bg-gradient-to-br from-orange-50 to-red-50 dark:from-orange-900/10 dark:to-red-900/10 p-6 rounded-2xl">
                 <div className="flex items-start mb-4">
                   <div className="w-8 h-8 bg-orange-100 dark:bg-orange-900/30 rounded-lg flex items-center justify-center mr-4 mt-1 flex-shrink-0">
                     <svg className="w-4 h-4 text-orange-600 dark:text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -218,7 +224,7 @@ export default function AboutPage() {
                   </div>
                   <div>
                     <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Community Builder</h4>
-                    <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                    <p className="text-gray-900 dark:text-gray-400 text-sm leading-relaxed">
                       As a Six Zero ambassador, pickleball coach, and Oregon Food Bank volunteer, I love creating environments where people feel valued and can do their best work.
                     </p>
                   </div>
@@ -228,7 +234,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section className="mb-16 py-12 bg-gradient-to-br from-purple-50/80 to-indigo-50/80 dark:from-purple-900/20 dark:to-indigo-900/20 backdrop-blur-sm rounded-2xl border border-gray-200/50 dark:border-gray-700/50">
+        <section className="mb-16 py-12 bg-gradient-to-br from-purple-50 to-indigo-50 dark:from-purple-900/20 dark:to-indigo-900/20 backdrop-blur-sm rounded-2xl border-2 border-gray-300 dark:border-gray-700/50">
           <div className="px-8">
             <h2 className="text-3xl font-bold mb-8 text-center text-gray-900 dark:text-white">Core Values</h2>
             <div className="grid md:grid-cols-3 gap-8">
@@ -239,7 +245,7 @@ export default function AboutPage() {
                   </svg>
                 </div>
                 <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Innovation</h3>
-                <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                <p className="text-gray-900 dark:text-gray-400 leading-relaxed">
                   Constantly exploring new technologies and approaches to solve problems more effectively.
                 </p>
               </div>
@@ -250,7 +256,7 @@ export default function AboutPage() {
                   </svg>
                 </div>
                 <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Communication</h3>
-                <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                <p className="text-gray-900 dark:text-gray-400 leading-relaxed">
                   Translating complex technical concepts into clear, actionable insights for diverse audiences.
                 </p>
               </div>
@@ -261,7 +267,7 @@ export default function AboutPage() {
                   </svg>
                 </div>
                 <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Intellectual Humility</h3>
-                <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                <p className="text-gray-900 dark:text-gray-400 leading-relaxed">
                   Embracing curiosity, asking the right questions, and adapting when better solutions emerge.
                 </p>
               </div>
@@ -281,7 +287,7 @@ export default function AboutPage() {
 
 
         {/* Call to Action */}
-        <section className="mt-16 py-12 bg-gradient-to-r from-blue-50/80 to-purple-50/80 dark:from-blue-900/20 dark:to-purple-900/20 backdrop-blur-sm rounded-2xl border border-gray-200/50 dark:border-gray-700/50">
+        <section className="mt-16 py-12 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 backdrop-blur-sm rounded-2xl border-2 border-gray-300 dark:border-gray-700/50">
           <div className="text-center max-w-3xl mx-auto px-6">
             <h2 className="text-3xl font-bold mb-6 text-gray-900 dark:text-white">Ready to Collaborate?</h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
@@ -310,5 +316,6 @@ export default function AboutPage() {
         </section>
       </div>
     </div>
+    </>
   )
 }

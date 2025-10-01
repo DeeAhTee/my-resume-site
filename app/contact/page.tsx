@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import BackgroundAnimation from '../components/BackgroundAnimation'
 import ContactForm from '../components/ContactForm'
+import Breadcrumbs from '../components/Breadcrumbs'
 
 export const metadata: Metadata = {
   title: 'Contact - Bruce Truong',
@@ -18,8 +19,13 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <div className="relative overflow-hidden min-h-screen">
-      <BackgroundAnimation />
+    <>
+      <Breadcrumbs items={[
+        { name: 'Home', url: '/' },
+        { name: 'Contact', url: '/contact' }
+      ]} />
+      <div className="relative overflow-hidden min-h-screen">
+        <BackgroundAnimation />
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
@@ -34,7 +40,7 @@ export default function ContactPage() {
           {/* Contact Info */}
           <div className="lg:col-span-2">
             <h2 className="text-2xl font-bold mb-8">Get in Touch</h2>
-            <p className="text-gray-600 dark:text-gray-400 mb-8">
+            <p className="text-gray-900 dark:text-gray-400 mb-8">
               Whether you&apos;re looking to collaborate on a project, have a job opportunity, or just want to connect, I&apos;d love to hear from you.
             </p>
 
@@ -114,9 +120,9 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <div className="mt-8 p-6 bg-gradient-to-r from-blue-50/80 to-purple-50/80 dark:from-blue-900/20 dark:to-purple-900/20 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50">
+            <div className="mt-8 p-6 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 backdrop-blur-sm rounded-xl border-2 border-gray-300 dark:border-gray-700/50">
               <h3 className="font-semibold mb-2">Response Time</h3>
-              <p className="text-sm text-gray-600 dark:text-gray-400">
+              <p className="text-sm text-gray-900 dark:text-gray-400">
                 I typically respond to messages within 24-48 hours. For urgent matters, email is the fastest way to reach me.
               </p>
             </div>
@@ -129,5 +135,6 @@ export default function ContactPage() {
         </div>
       </div>
     </div>
+    </>
   )
 }

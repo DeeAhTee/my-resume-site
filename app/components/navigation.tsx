@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ThemeToggle } from "../theme-toggle";
 import Search from "./Search";
 
@@ -16,8 +16,18 @@ const navigationItems = [
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
-  
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   // Helper function to check if current page matches navigation item
   const isCurrentPage = (href: string) => {
     // Remove trailing slash from pathname for comparison
@@ -27,7 +37,7 @@ export function Navigation() {
   };
 
   return (
-    <nav className="bg-white/98 dark:bg-gray-900/98 backdrop-blur-2xl border-b border-gray-100 dark:border-gray-800 sticky top-0 z-50">
+    <nav className={`bg-white/98 dark:bg-gray-900/98 backdrop-blur-2xl border-b border-gray-100 dark:border-gray-800 sticky top-0 z-50 transition-shadow duration-300 ${scrolled ? 'shadow-lg' : ''}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20 gap-4">
           {/* Left: Logo */}
