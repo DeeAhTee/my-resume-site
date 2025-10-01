@@ -60,6 +60,13 @@ export default function Home() {
       <BackgroundAnimation />
       <HeroSection />
 
+      {/* Testimonials */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <Testimonials />
+        </div>
+      </section>
+
       {/* Quick Overview Section */}
       <section id="services" className="relative py-24 px-4 sm:px-6 lg:px-8">
         {/* Enhanced section background with better blur */}
@@ -285,13 +292,6 @@ export default function Home() {
               <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">Project Delivery</p>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
-          <Testimonials />
         </div>
       </section>
     </div>
