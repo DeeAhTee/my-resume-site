@@ -7,19 +7,24 @@ export async function GET() {
   const buffer = await response.arrayBuffer();
   const photoBase64 = Buffer.from(buffer).toString('base64');
 
-  // vCard 4.0 format
-  const vcard = `BEGIN:VCARD
-VERSION:4.0
-FN:Bruce Truong
-N:Truong;Bruce;;;
-EMAIL:contact@brucetruong.com
-TEL;TYPE=cell:+15039149879
-ADR:;;Beaverton;OR;;;USA
-URL:https://www.brucetruong.com
-TITLE:Software Engineer
-BDAY:--1010
-PHOTO;ENCODING=b;TYPE=JPEG:${photoBase64}
-END:VCARD`;
+  // Fold base64 data at 75 characters for vCard 3.0 compatibility
+  const foldedPhoto = photoBase64.match(/.{1,75}/g)?.join('\r\n ') || photoBase64;
+
+  // vCard 3.0 format for maximum iOS/Android compatibility
+  const vcard = [
+    'BEGIN:VCARD',
+    'VERSION:3.0',
+    'N:Truong;Bruce;;;',
+    'FN:Bruce Truong',
+    'TEL;TYPE=CELL:+15039149879',
+    'EMAIL;TYPE=INTERNET:contact@brucetruong.com',
+    'ADR;TYPE=HOME:;;Beaverton;OR;;;USA',
+    'URL:https://www.brucetruong.com',
+    'TITLE:Software Engineer',
+    'BDAY:1990-10-10',
+    `PHOTO;ENCODING=b;TYPE=JPEG:${foldedPhoto}`,
+    'END:VCARD'
+  ].join('\r\n');
 
   return new NextResponse(vcard, {
     headers: {
