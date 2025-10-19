@@ -21,7 +21,7 @@ export async function GET() {
     'ADR;TYPE=HOME:;;Beaverton;OR;;;USA',
     'URL:https://www.brucetruong.com',
     'TITLE:Software Engineer',
-    'BDAY:1990-10-10',
+    'BDAY:1989-10-10',
     `PHOTO;ENCODING=b;TYPE=JPEG:${foldedPhoto}`,
     'END:VCARD'
   ].join('\r\n');

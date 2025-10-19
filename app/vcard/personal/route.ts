@@ -20,7 +20,7 @@ export async function GET() {
     'EMAIL;TYPE=INTERNET:deeahtee@live.com',
     'ADR;TYPE=HOME:;;Beaverton;OR;;;USA',
     'TITLE:Software Engineer',
-    'BDAY:1990-10-10',
+    'BDAY:1900-10-10',
     `PHOTO;ENCODING=b;TYPE=JPEG:${foldedPhoto}`,
     'END:VCARD'
   ].join('\r\n');
